@@ -56,9 +56,6 @@ class WordleGame {
             'WORTH', 'WOULD', 'WRITE', 'WRONG', 'WROTE', 'YOUNG', 'YOUTH'
         ];
         
-        // Create a Set for O(1) lookup performance
-        this.validWords = new Set(this.words);
-        
         this.currentWord = this.getRandomWord();
         this.currentGuess = '';
         this.guesses = [];
@@ -209,11 +206,6 @@ class WordleGame {
             return;
         }
         
-        if (!this.isValidWord(this.currentGuess)) {
-            this.showInvalidWordMessage();
-            return;
-        }
-        
         this.guesses.push(this.currentGuess);
         this.evaluateGuess();
         
@@ -225,28 +217,6 @@ class WordleGame {
             this.currentRow++;
             this.currentGuess = '';
         }
-    }
-    
-    showInvalidWordMessage() {
-        this.showMessage('Not a valid word!', 'error');
-        
-        // Add shake animation to current row
-        for (let i = 0; i < 5; i++) {
-            const tile = document.getElementById(`tile-${this.currentRow}-${i}`);
-            tile.classList.add('shake');
-        }
-        
-        // Remove shake animation after it completes
-        setTimeout(() => {
-            for (let i = 0; i < 5; i++) {
-                const tile = document.getElementById(`tile-${this.currentRow}-${i}`);
-                tile.classList.remove('shake');
-            }
-        }, 600);
-    }
-    
-    isValidWord(word) {
-        return this.validWords.has(word.toUpperCase());
     }
     
     evaluateGuess() {
