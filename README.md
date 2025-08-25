@@ -54,7 +54,7 @@ No server or additional setup required - it's a client-side application.
 
 ## Live Demo
 
-🎮 **[Play the Game Live](https://yourusername.github.io/your-repo-name)** 
+🎮 **[Play the Game Live]https://arun2424.github.io/WORDLE/** 
 
 ## Deployment
 
