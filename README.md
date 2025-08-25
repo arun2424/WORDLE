@@ -1,4 +1,4 @@
-# Wordle Clone
+[# Wordle Clone
 
 A modern, fully-featured Wordle clone built with HTML, CSS, and JavaScript. This version includes the classic Wordle gameplay with an additional feature that displays the meaning of the word at the end of each game.
 
@@ -75,3 +75,4 @@ You can easily customize the game by:
 ## Note
 
 Enjoy playing Wordle! 🎯
+](https://arun2424.github.io/WORDLE/)
